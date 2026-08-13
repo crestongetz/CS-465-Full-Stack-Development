@@ -16,7 +16,7 @@ Travlr Getaways is a full-stack web application designed for seamless travel boo
 
 Both share a common REST API (`app_api/`) backed by MongoDB.
 
-You can view the full Software Design Doc here: [Design Doc](https://github.com/crestongetz/Travlr-Getaways/blob/29d313213b0796eab52a46aa5a834dff060261d2/images/Travlr%20Software%20Design%20Document.pdf)
+You can view the full Software Design Doc here: [Design Doc](https://github.com/crestongetz/Travlr-Getaways/blob/main/images/Travlr%20Software%20Design%20Document.pdf)
 
 ## Getting Started
 To run, you will need:
@@ -35,7 +35,7 @@ To run, you will need:
 2. Run `npm start` in the project root
 3. The server will start on **http://localhost:3000**
 4. Visit that URL on any web browser
-![Picture of Express MVC Home](https://github.com/crestongetz/CS-465-Full-Stack-Development/blob/a12258cbada397051f28a951a71cae17a2060785/images/Express%20App%20Home.png)
+![Picture of Express MVC Home](https://github.com/crestongetz/CS-465-Full-Stack-Development/blob/main/images/Express%20App%20Home.png)
 
 ### How to Run Angular SPA
 1. Open a new terminal (the SPA makes API calls to the Express backend)
@@ -44,7 +44,7 @@ To run, you will need:
 3. Run `ng serve` to start the Angular application
 4. The Angular application will start on **http://localhost:4200**
 5. Visit that URL in any web browser
-![Picture of Angular SPA Home](https://github.com/crestongetz/CS-465-Full-Stack-Development/blob/2b40d7b2a2d9fc1e3a7c6910cd1d7a61b4fe6841/images/Angular%20SPA%20Home.png)
+![Picture of Angular SPA Home](https://github.com/crestongetz/CS-465-Full-Stack-Development/blob/main/images/Angular%20SPA%20Home.png)
 
 
 ## Architecture
@@ -63,7 +63,7 @@ travlr/
 
 Various frontend frameworks were used for the two applications. The Express MVC app utilizes HTML, CSS, and some JavaScript. The Angular SPA also uses HTML and CSS but makes heavy use of components, services, and routes, which are unique to Angular. The main difference between the two is where they are run. The HTML for the Express MVC is running on the server, while the Angular SPA will be sent and run on the user's web browser. **The flow of how data is shown to the user can be seen in the sequence diagram below:**
 
-![Picture of Sequence Diagram](https://github.com/crestongetz/Travlr-Getaways/blob/9ca99ccf35afc888ff3e5f0ace876f0ec861aa32/images/Sequence%20Diagram_Travlr%20Getaways.png)
+![Picture of Sequence Diagram](https://github.com/crestongetz/Travlr-Getaways/blob/main/images/Sequence%20Diagram_Travlr%20Getaways.png)
 
 A NoSQL database (MongoDB) was used for its flexibility compared to SQL. MongoDB uses JSON, which is the standard form of communication for other parts of this application. JSON can be converted into JS objects and vice versa. Using a NoSQL database also makes future changes to the applications much easier. 
 
@@ -72,7 +72,7 @@ A NoSQL database (MongoDB) was used for its flexibility compared to SQL. MongoDB
 JSON is a text-based format to transfer data, while JavaScript is a comprehensive programming language with logic and functions. As mentioned above, JSON ties together the application by being universally compatible across the tools used. It acts as the translator and transport method for the front and backend of the application. When an admin in the SPA creates a new trip, an HTTP request is sent to the database, which will store it. And when the frontend needs data from the database, it sends a request, and the database will respond with JSON. JSON is language-independent, so it doesn't matter what language we use. It is also lightweight and fast. Having all requests in JSON improves maintainability and flexibility.
 
 Throughout the development of this application, I refactored code to improve the user interface. One example can be seen in the screenshot for the Angular SPA above and below. When you log into the SPA, buttons to add a trip and edit an existing one will appear, but they will not appear if the user is not logged in. This reduces friction, improves security, and enhances user experience.
-![Picture of Angular SPA while logged In](https://github.com/crestongetz/CS-465-Full-Stack-Development/blob/4be99ba98b0ee438a9c8208ab9689a2b52cd22ff/images/SPA%20while%20logged%20in.png)
+![Picture of Angular SPA while logged In](https://github.com/crestongetz/CS-465-Full-Stack-Development/blob/main/images/SPA%20while%20logged%20in.png)
 
 On top of developing for user experience, I built the application with as many reusable interface components as possible. For example, in the Express MVC app, the header and footer are built using Handlebars, which allows us to add a few lines to any HTML file rather than all the code for it. Using reusable UI components is extremely beneficial for maintainability, flexibility, and future updates or changes.
 
